@@ -1,1 +1,554 @@
-<a href="/" class="flex items-center gap-2 hover:opacity-80 transition-opacity"><span class="material-icons-round text-primary text-3xl">biotech</span><span class="font-display font-bold text-xl text-brand-dark dark:text-white tracking-tight">Dental Design Research</span></a>
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZ5C1V0MW2"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'G-NZ5C1V0MW2');
+      </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dental Design Research | Understanding CAD/STL Workflows</title>
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://dentaldesignresearch.com/" />
+<meta property="og:title" content="Dental Design Research" />
+<meta property="og:description" content="We are conducting independent research to understand how dental labs, clinics, and CAD designers work with digital design, communication, and file exchange." />
+<meta property="og:image" content="https://dentaldesignresearch.com/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Dental Design Research – Digital Dentistry & CAD Workflow Study" />
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Dental Design Research" />
+<meta name="twitter:description" content="Independent research on digital workflows, CAD design, and communication between dental labs and clinics." />
+<meta name="twitter:image" content="https://dentaldesignresearch.com/og-image.jpg" />
+
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234A9CCF'%3E%3Cpath d='M12 2c-4 0-5 3.5-5 6 0 2.5 1 4.5 2.5 5.5.5.3.5.8.5 1.3 0 2.2 2 3.2 2 5.2 0 1.1-.9 2-2 2s-2-.9-2-2H6c0 2.2 1.8 4 4 4s4-1.8 4-4c0-2-2-3-2-5.2 0-.5 0-1 .5-1.3C15 12.5 17 10.5 17 8c0-2.5-1-6-5-6z'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;600;700&amp;family=Material+Icons+Round&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4A9CCF",
+              "background-light": "#F9FCFE",
+              "background-dark": "#0F172A",
+              "brand-dark": "#1F3B52",
+              "brand-blue-soft": "#D9EAF4",
+              "clinical-gray": "#3C4858",
+              "border-soft": "#C0CCD9",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Outfit", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.75rem",
+              'sm-clinical': '3px',
+              'btn-clinical': '12px',
+            },
+          },
+        },
+      };
+    </script>
+<style type="text/tailwindcss">
+        .hero-gradient {
+            background: linear-gradient(180deg, #8FBFD9 0%, #F9FCFE 100%)
+        }
+        .dark .hero-gradient {
+            background: linear-gradient(180deg, #1E3A8A 0%, #0F172A 100%)
+        }
+        .dental-waves {
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuC9EJ0T72QfxCZI1_6b0oSmsbdIIPyr5Bvijoo1JY_8hiuXb4HDmA3RqD2hM_ISD4KJzX3VDes66S6V01QmB93XQ_KuWvUWjMKcvToUsnJOjzPiIn67z-kL8NYoFc1PIdJbqjdaoTIuXM3feLfFjzDLhgiMdStaqEXqLo2jq4rj2OXGVY5bUHx4MS05Mj7SG4uQhNEF-XY-iseiHsQvjprKfpca1ZdHSHlVOKG8-r0r2L3F4-ngTpNhN7zuEiUx8_9qCjVkBwOU);
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(217, 234, 244, 1)
+        }
+        .dark .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(51, 65, 85, 1)
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<!-- Begin Brevo Form (head) -->
+<style>
+  @font-face {
+    font-display: block;
+    font-family: Roboto;
+    src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"),
+         url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff");
+  }
+  @font-face {
+    font-display: fallback;
+    font-family: Roboto;
+    font-weight: 600;
+    src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"),
+         url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff");
+  }
+  @font-face {
+    font-display: fallback;
+    font-family: Roboto;
+    font-weight: 700;
+    src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"),
+         url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff");
+  }
+  #sib-container input:-ms-input-placeholder { text-align:left; font-family:Helvetica, sans-serif; color:#c0ccda; }
+  #sib-container input::placeholder { text-align:left; font-family:Helvetica, sans-serif; color:#c0ccda; }
+  #sib-container textarea::placeholder { text-align:left; font-family:Helvetica, sans-serif; color:#c0ccda; }
+  #sib-container a { text-decoration:underline; color:#2BB2FC; }
+</style>
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+<!-- End Brevo Form (head) -->
+
+
+<!-- Brevo Conversations -->
+<script>
+    (function(d, w, c) {
+        w.BrevoConversationsID = '6971259b11d56e19da04fda5';
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'BrevoConversations');
+</script>
+<!-- /Brevo Conversations -->
+
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-700 dark:text-slate-300 font-sans">
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-brand-blue-soft dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex items-center gap-2">
+<span class="material-icons-round text-primary text-3xl">biotech</span>
+<span class="font-display font-bold text-xl text-brand-dark dark:text-white tracking-tight">Dental Design Research</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#about">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#challenges">Challenges</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#workflow">Workflow</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#who">Who is this for?</a>
+<a class="bg-primary text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-opacity-90 transition-all shadow-md shadow-primary/20" href="#survey">Take Survey</a>
+</div>
+</div>
+</div>
+</nav>
+<section class="relative hero-gradient overflow-hidden pt-28 pb-48">
+<div class="absolute inset-0 dental-waves pointer-events-none"></div>
+<div class="relative max-w-5xl mx-auto px-4 text-center">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/40 dark:bg-slate-800/40 border border-white/50 dark:border-slate-700 mb-8 backdrop-blur-sm">
+<span class="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-bold uppercase tracking-wider text-brand-dark dark:text-slate-200">Independent Research 2026</span>
+</div>
+<h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-brand-dark dark:text-white mb-8 leading-tight">
+            Researching Better Ways to Work with <br class="hidden md:block"/><span class="text-primary">Dental CAD / STL</span> Design
+        </h1>
+<p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
+            We are conducting independent research to understand the friction points in dental lab and clinic workflows when handling digital designs. Help us map the future of digital dentistry.
+        </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<a class="w-full sm:w-auto flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl hover:-translate-y-0.5 transition-all" href="#survey">
+                Take the short survey
+                <span class="text-sm opacity-80 font-normal">(2-4 min)</span>
+</a>
+<a class="w-full sm:w-auto flex items-center justify-center gap-2 bg-white dark:bg-slate-800 text-brand-dark dark:text-white border border-brand-blue-soft dark:border-slate-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-all" href="#results">
+                Receive research results
+            </a>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-slate-900" id="about">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-display text-3xl font-bold text-brand-dark dark:text-white mb-6">Why We Are Running This Survey</h2>
+<p class="text-lg text-slate-600 dark:text-slate-400 mb-8">
+                    The transition to digital dentistry has solved many problems but introduced new operational complexities. This research aims to quantify those hurdles.
+                </p>
+<ul class="space-y-5">
+<li class="flex items-start gap-4">
+<span class="material-icons-round text-primary mt-1">check_circle</span>
+<div>
+<h4 class="font-bold text-brand-dark dark:text-white">Understanding Labs</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400">Deep dive into how labs manage the peak demand of design requests.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-icons-round text-primary mt-1">check_circle</span>
+<div>
+<h4 class="font-bold text-brand-dark dark:text-white">Operational Challenges</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400">Identifying bottlenecks in STL file sharing and communication between clinics and labs.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-icons-round text-primary mt-1">check_circle</span>
+<div>
+<h4 class="font-bold text-brand-dark dark:text-white">Market Needs</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400">Evaluating the need for more transparent, scalable design services.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="relative">
+<div class="absolute -inset-4 bg-primary/10 rounded-3xl blur-2xl"></div>
+<div class="relative glass-card p-8 rounded-3xl border-2 border-brand-blue-soft dark:border-slate-800">
+<span class="material-icons-round text-5xl text-primary mb-4">analytics</span>
+<blockquote class="text-xl italic font-medium text-brand-dark dark:text-white leading-relaxed">
+                        "Our goal is to build a comprehensive data set that helps technology providers build better tools for the dental professionals who use them every day."
+                    </blockquote>
+<div class="mt-6 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-brand-blue-soft dark:bg-slate-700 flex items-center justify-center">
+<span class="material-icons-round text-primary">person</span>
+</div>
+<div>
+<p class="font-bold text-brand-dark dark:text-white">Research Lead</p>
+<p class="text-xs text-slate-500 uppercase tracking-widest">Dental Systems Analysis</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-background-light dark:bg-slate-900/50" id="challenges">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="font-display text-3xl font-bold text-brand-dark dark:text-white mb-4">Challenges We Are Exploring</h2>
+<p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">We are focusing on these three core pillars of the digital dental workflow.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white dark:bg-slate-800 border border-brand-blue-soft dark:border-slate-700 p-8 rounded-2xl shadow-sm hover:shadow-md transition-all group">
+<div class="w-14 h-14 bg-brand-blue-soft dark:bg-slate-700 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-icons-round text-primary group-hover:text-white">search</span>
+</div>
+<h3 class="text-xl font-bold text-brand-dark dark:text-white mb-4">Finding Designers</h3>
+<p class="text-slate-600 dark:text-slate-400">How difficult is it to find qualified CAD designers who understand your specific aesthetic standards?</p>
+</div>
+<div class="bg-white dark:bg-slate-800 border border-brand-blue-soft dark:border-slate-700 p-8 rounded-2xl shadow-sm hover:shadow-md transition-all group">
+<div class="w-14 h-14 bg-brand-blue-soft dark:bg-slate-700 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-icons-round text-primary group-hover:text-white">visibility</span>
+</div>
+<h3 class="text-xl font-bold text-brand-dark dark:text-white mb-4">Transparency</h3>
+<p class="text-slate-600 dark:text-slate-400">Tracking progress, turnaround times, and pricing for external design services can often be opaque.</p>
+</div>
+<div class="bg-white dark:bg-slate-800 border border-brand-blue-soft dark:border-slate-700 p-8 rounded-2xl shadow-sm hover:shadow-md transition-all group">
+<div class="w-14 h-14 bg-brand-blue-soft dark:bg-slate-700 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-icons-round text-primary group-hover:text-white">trending_up</span>
+</div>
+<h3 class="text-xl font-bold text-brand-dark dark:text-white mb-4">Scaling Operations</h3>
+<p class="text-slate-600 dark:text-slate-400">The friction points that occur when a clinic or lab tries to double its case volume overnight.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-slate-900" id="workflow">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="font-display text-4xl font-bold text-brand-dark dark:text-white mb-6">Communication Across the Dental Workflow</h2>
+<p class="text-slate-600 dark:text-slate-400 max-w-3xl mx-auto text-lg leading-relaxed">
+                Digital dental workflows often involve multiple independent parties. Today, communication typically happens across different tools and channels, which can make coordination slower and more complex. Through this research, we want to understand whether professionals see value in having a single, dedicated communication space for dental-related collaboration.
+            </p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white dark:bg-slate-800 border border-brand-blue-soft dark:border-slate-700 p-8 rounded-2xl hover:border-primary/50 transition-all flex flex-col shadow-sm">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">medical_services</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-widest text-primary mb-2">Clinic Communication</span>
+<h3 class="text-xl font-bold text-brand-dark dark:text-white mb-4">Dental Clinics</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Coordination between labs and clinics often includes case details, revisions, approvals, and timelines. We are exploring how communication with clinics is handled today and whether a more centralized approach would be useful.
+                </p>
+</div>
+<div class="bg-white dark:bg-slate-800 border border-brand-blue-soft dark:border-slate-700 p-8 rounded-2xl hover:border-primary/50 transition-all flex flex-col shadow-sm">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">draw</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-widest text-primary mb-2">Designer Collaboration</span>
+<h3 class="text-xl font-bold text-brand-dark dark:text-white mb-4">CAD / Dental Designers</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Working with external CAD designers usually involves frequent feedback, file exchanges, and clarifications. We want to understand if managing these conversations in one place would improve clarity and efficiency.
+                </p>
+</div>
+<div class="bg-white dark:bg-slate-800 border border-brand-blue-soft dark:border-slate-700 p-8 rounded-2xl hover:border-primary/50 transition-all flex flex-col shadow-sm">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">inventory_2</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-widest text-primary mb-2">Supplier Communication</span>
+<h3 class="text-xl font-bold text-brand-dark dark:text-white mb-4">Equipment &amp; Material Suppliers</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Labs and clinics often need to communicate with suppliers regarding materials, equipment availability, and specifications. We are exploring whether integrating these conversations into a single workflow could reduce friction.
+                </p>
+</div>
+<div class="bg-white dark:bg-slate-800 border border-brand-blue-soft dark:border-slate-700 p-8 rounded-2xl hover:border-primary/50 transition-all flex flex-col shadow-sm">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">factory</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-widest text-primary mb-2">Production Coordination</span>
+<h3 class="text-xl font-bold text-brand-dark dark:text-white mb-4">Manufacturing Centers</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Communication with manufacturing centers can include production status, technical requirements, and delivery timelines. We want to understand if professionals see value in managing these interactions through a unified communication channel.
+                </p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16">
+<div class="max-w-4xl mx-auto px-4">
+<div class="bg-primary/5 dark:bg-primary/10 border-2 border-dashed border-primary/30 rounded-3xl p-10 text-center">
+<span class="material-icons-round text-primary text-4xl mb-4">info</span>
+<h3 class="text-2xl font-bold text-brand-dark dark:text-white mb-4">The Purpose of This Research</h3>
+<p class="text-slate-700 dark:text-slate-300 leading-relaxed italic">
+                "This is an early-stage research initiative. We are currently in the data collection phase. There is no final product being sold; our focus is purely on understanding the market's technological needs and workflow bottlenecks."
+            </p>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-slate-900" id="who">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="font-display text-3xl font-bold text-brand-dark dark:text-white mb-4">Who This Survey Is For</h2>
+<p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">We are looking for insights from both ends of the digital workflow.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-12">
+<div class="flex gap-6 p-8 rounded-2xl bg-background-light dark:bg-slate-800/50 border border-brand-blue-soft dark:border-slate-700">
+<div class="shrink-0 w-16 h-16 bg-white dark:bg-slate-800 rounded-full shadow-sm flex items-center justify-center">
+<span class="material-icons-round text-primary text-3xl">home_work</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-brand-dark dark:text-white mb-3">Dental Laboratories</h3>
+<p class="text-slate-600 dark:text-slate-400">Owners and technicians managing high-volume CAD design and manufacturing workflows.</p>
+<ul class="mt-4 space-y-2 text-sm text-slate-500">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Lab Managers</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> CAD/CAM Technicians</li>
+</ul>
+</div>
+</div>
+<div class="flex gap-6 p-8 rounded-2xl bg-background-light dark:bg-slate-800/50 border border-brand-blue-soft dark:border-slate-700">
+<div class="shrink-0 w-16 h-16 bg-white dark:bg-slate-800 rounded-full shadow-sm flex items-center justify-center">
+<span class="material-icons-round text-primary text-3xl">medical_services</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-brand-dark dark:text-white mb-3">Dental Clinics</h3>
+<p class="text-slate-600 dark:text-slate-400">Practices performing chairside scans and working with external designers or labs.</p>
+<ul class="mt-4 space-y-2 text-sm text-slate-500">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Dentists &amp; Orthodontists</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Clinical Coordinators</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24" id="survey">
+<div class="max-w-4xl mx-auto px-4">
+<div class="relative overflow-hidden bg-brand-dark text-white rounded-3xl p-12 md:p-16 shadow-2xl">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary opacity-20 blur-3xl rounded-full -mr-20 -mt-20"></div>
+<div class="relative z-10 text-center">
+<h2 class="font-display text-4xl font-bold mb-6">Ready to contribute?</h2>
+<p class="text-lg text-slate-300 mb-10 max-w-xl mx-auto">
+                    Your input is anonymous and will only be used for research purposes. It takes less than 5 minutes to complete.
+                </p>
+<div class="flex flex-col items-center gap-6">
+<a class="bg-primary text-white px-10 py-5 rounded-2xl font-bold text-xl hover:scale-105 transition-transform shadow-lg shadow-primary/30" href="https://docs.google.com/forms/d/e/1FAIpQLSf2LUYvcOdAOjuxYJ3ZV7MAIdscvu0BYSNXZMavkT8x-vPbjg/viewform?usp=header" target="_blank">
+                        Take the survey
+                    </a>
+<div class="flex items-center gap-8 text-sm text-slate-400">
+<span class="flex items-center gap-2"><span class="material-icons-round text-primary text-base">timer</span> ~4 Minutes</span>
+<span class="flex items-center gap-2"><span class="material-icons-round text-primary text-base">lock</span> Anonymous</span>
+<span class="flex items-center gap-2"><span class="material-icons-round text-primary text-base">analytics</span> Research-driven</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-slate-900 border-t border-brand-blue-soft dark:border-slate-800" id="results">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="sib-form" style="text-align: center; background-color: #EFF2F7;">
+  <div id="sib-form-container" class="sib-form-container">
+    <div id="error-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;max-width:540px;">
+      <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+        <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+          <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+        </svg>
+        <span class="sib-form-message-panel__inner-text">
+          Your subscription could not be saved. Please try again.
+        </span>
+      </div>
+    </div>
+
+    <div id="success-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#085229; background-color:#e7faf0; border-radius:3px; border-color:#13ce66;max-width:540px;">
+      <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+        <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+          <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+        </svg>
+        <span class="sib-form-message-panel__inner-text">
+          Your subscription has been successful.
+        </span>
+      </div>
+    </div>
+
+    <div id="sib-container" class="sib-container--large sib-container--horizontal" style="text-align:center; background-color:rgba(255,255,255,1); max-width:540px; border-radius:3px; border-width:3px; border-color:#C0CCD9; border-style:solid; direction:ltr">
+      <form id="sib-form" method="POST" action="https://2b176075.sibforms.com/serve/MUIFAD1v_oWsu10Q1QGIxLCyZysiLqwHztv9U0s6biIPg1YCTYCIoNvRQuZeaf4Ck53S5uWiVIG-DhZQ5Ze_WxO2aeoLZFAYSo6h4Fq3OUED-l9mFL8BSYtiI9Dh7qcZybn2p7JYTughem3HL30lNKLW3YprRL5rZT645f4BtUgMnM1Til2ITtMWpaszYuTRXilImTMcl8KCgYTdyQ==" data-type="subscription">
+        <div style="padding: 8px 0;">
+          <div class="sib-form-block" style="font-size:32px; text-align:center; font-weight:700; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent;">
+            <p>Receive Research Results</p>
+          </div>
+        </div>
+
+        <div style="padding: 8px 0;">
+          <div class="sib-form-block" style="font-size:16px; text-align:center; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent;">
+            <div class="sib-text-form-block">
+              <p>Want to see what we discover? Leave your email to receive a summary of the findings once the study is complete.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 8px 0;">
+          <div class="sib-input sib-form-block">
+            <div class="form__entry entry_block">
+              <div class="form__label-row form__label-row--horizontal">
+                <div class="entry__field">
+                  <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
+                </div>
+              </div>
+
+              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;"></label>
+
+              <label class="entry__specification" style="font-size:12px; text-align:left; font-family:Helvetica, sans-serif; color:#8390A4;">
+                Provide your email address to subscribe. For e.g abc@xyz.com
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 8px 0;">
+          <div class="sib-form-block" style="text-align: center">
+            <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:16px; text-align:center; font-weight:700; font-family:Helvetica, sans-serif; color:#FFFFFF; background-color:#1f3b52; border-radius:12px; border-width:0px;" form="sib-form" type="submit">
+              <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
+                <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+              </svg>
+              Notify Me
+            </button>
+          </div>
+        </div>
+
+        <input type="text" name="email_address_check" value="" class="input--hidden">
+        <input type="hidden" name="locale" value="en">
+      </form>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<section class="py-24 bg-background-light dark:bg-slate-900/50">
+<div class="max-w-3xl mx-auto px-4">
+<h2 class="font-display text-3xl font-bold text-center text-brand-dark dark:text-white mb-12">Common Questions</h2>
+<div class="space-y-4">
+<details class="group bg-white dark:bg-slate-800 rounded-2xl border border-brand-blue-soft dark:border-slate-700" open="">
+<summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-brand-dark dark:text-white list-none">
+                    How is my data used?
+                    <span class="material-icons-round group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-slate-600 dark:text-slate-400">
+                    All survey responses are aggregated to identify trends. We do not sell individual data points or identifying information to third parties.
+                </div>
+</details>
+<details class="group bg-white dark:bg-slate-800 rounded-2xl border border-brand-blue-soft dark:border-slate-700">
+<summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-brand-dark dark:text-white list-none">
+                    Who is funding this research?
+                    <span class="material-icons-round group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-slate-600 dark:text-slate-400">
+                    This is an independently funded project by dental technology analysts aiming to better understand the digital transformation of the industry.
+                </div>
+</details>
+<details class="group bg-white dark:bg-slate-800 rounded-2xl border border-brand-blue-soft dark:border-slate-700">
+<summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-brand-dark dark:text-white list-none">
+                    When will the results be available?
+                    <span class="material-icons-round group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-slate-600 dark:text-slate-400">
+                    We expect to conclude the data collection phase by Q3 2026 and release a summary report shortly thereafter.
+                </div>
+</details>
+</div>
+</div>
+</section>
+<footer class="bg-brand-dark text-white py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-icons-round text-primary text-3xl">biotech</span>
+<span class="font-display font-bold text-xl tracking-tight">Dental Design Research</span>
+</div>
+<p class="text-slate-400 max-w-sm">
+                    Building the most comprehensive dataset on dental CAD/STL workflows to drive the next generation of industry tools.
+                </p>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-slate-200">Contact</h4>
+<a class="text-slate-400 hover:text-primary transition-colors" href="mailto:info@dentaldesignresearch.com">info@dentaldesignresearch.com</a>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-slate-200">Legal</h4>
+<ul class="space-y-3 text-slate-400 text-sm">
+<li><a class="hover:text-primary" href="privacy-policy.html">Privacy Policy</a></li>
+<li><a class="hover:text-primary" href="terms-of-service.html">Terms of Service</a></li>
+<li><a class="hover:text-primary" href="research-ethics.html">Research Ethics</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500 text-sm">© 2026 Dental Design Research Project. All rights reserved.</p>
+<div class="flex gap-6">
+<span class="text-xs text-slate-600 italic">Independent Research Initiative</span>
+</div>
+</div>
+</div>
+</footer>
+
+<!-- Begin Brevo Form (footer) -->
+<script>
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+  window.LOCALE = 'en';
+  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+  window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
+  window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+  window.translation = {
+    common: {
+      selectedList: '{quantity} list selected',
+      selectedLists: '{quantity} lists selected',
+      selectedOption: '{quantity} selected',
+      selectedOptions: '{quantity} selected',
+    }
+  };
+  var AUTOHIDE = Boolean(1);
+</script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+<!-- End Brevo Form (footer) -->
+
+</body></html>
