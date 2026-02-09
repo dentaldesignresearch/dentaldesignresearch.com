@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Research Ethics | Dental Design Research</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234A9CCF'%3E%3Cpath d='M18.61,4.35C17.39,3.13 15.19,3 13.5,3c-0.5,0-1,0-1.5,0.11C11.5,3 11,3 10.5,3C8.81,3 6.61,3.13 5.39,4.35 c-1.5,1.5-1.42,4.63-1.37,60.03,0.82,0.1,1.53,0.31,2.1c0.39,1.1,1.04,1.86,1.88,2.44c0.41,0.28,0.85,0.51,1.3,0.67 c0.6,0.22,1.21,0.36,1.72,1.33c0.43,0.81,0.4,2.37,0.4,2.61c0,1.5,1.1,2.5,2.4,2.5s2.4-1,2.4-2.5c0-0.24-0.03-1.8,0.4-2.61 c0.51-0.97,1.12-1.11,1.72-1.33c0.45-0.16,0.89-0.39,1.3-0.67c0.84-0.58,1.49-1.34,1.88-2.44c0.21-0.57,0.28-1.28,0.31-2.1 C20.03,8.98,20.11,5.85,18.61,4.35z'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;600;700&amp;family=Material+Icons+Round&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4A9CCF",
+              "background-light": "#F9FCFE",
+              "background-dark": "#0F172A",
+              "brand-dark": "#1F3B52",
+              "brand-blue-soft": "#D9EAF4",
+              "clinical-gray": "#3C4858",
+              "blue-gray-text": "#3E5F77",
+              "border-soft": "#C0CCD9",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Outfit", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.75rem",
+              'sm-clinical': '3px',
+              'btn-clinical': '12px',
+            },
+          },
+        },
+      };
+    </script>
+<style type="text/tailwindcss">
+        .hero-gradient {
+            background: linear-gradient(180deg, #8FBFD9 0%, #F9FCFE 100%)
+        }
+        .dark .hero-gradient {
+            background: linear-gradient(180deg, #1E3A8A 0%, #0F172A 100%)
+        }
+        .dental-waves {
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuC9EJ0T72QfxCZI1_6b0oSmsbdIIPyr5Bvijoo1JY_8hiuXb4HDmA3RqD2hM_ISD4KJzX3VDes66S6V01QmB93XQ_KuWvUWjMKcvToUsnJOjzPiIn67z-kL8NYoFc1PIdJbqjdaoTIuXM3feLfFjzDLhgiMdStaqEXqLo2jq4rj2OXGVY5bUHx4MS05Mj7SG4uQhNEF-XY-iseiHsQvjprKfpca1ZdHSHlVOKG8-r0r2L3F4-ngTpNhN7zuEiUx8_9qCjVkBwOU);
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-blue-gray-text dark:text-slate-300 font-sans">
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-brand-blue-soft dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex items-center gap-2">
+<span class="material-icons-round text-primary text-3xl">biotech</span>
+<span class="font-display font-bold text-xl text-brand-dark dark:text-white tracking-tight">Dental Design Research</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-sm font-medium text-brand-dark hover:text-primary transition-colors" href="index.html#about">About</a>
+<a class="text-sm font-medium text-brand-dark hover:text-primary transition-colors" href="index.html#challenges">Problems</a>
+<a class="text-sm font-medium text-brand-dark hover:text-primary transition-colors" href="index.html#workflow">Workflow</a>
+<a class="text-sm font-medium text-brand-dark hover:text-primary transition-colors" href="index.html#who">Who is this for?</a>
+<a class="bg-primary text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-opacity-90 transition-all shadow-md shadow-primary/20" href="index.html#survey">Take Survey</a>
+</div>
+</div>
+</div>
+</nav>
+<section class="relative hero-gradient overflow-hidden pt-20 pb-20">
+<div class="absolute inset-0 dental-waves pointer-events-none"></div>
+<div class="relative max-w-5xl mx-auto px-4 text-center">
+<h1 class="font-display text-4xl md:text-6xl font-bold text-brand-dark dark:text-white mb-4 leading-tight">
+            Research Ethics
+        </h1>
+<p class="text-xl md:text-2xl text-primary font-semibold max-w-2xl mx-auto mb-8">
+            Our Commitment to Ethical Research
+        </p>
+</div>
+</section>
+<section class="py-16 bg-background-light dark:bg-slate-900">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="mb-16">
+<p class="text-lg leading-relaxed text-blue-gray-text dark:text-slate-400">
+                At Dental Design Research, we believe that advancing the field of digital dentistry requires more than just data—it requires a foundation of trust. We are committed to conducting our research responsibly, transparently, and with the utmost respect for every participant's privacy and contribution.
+            </p>
+</div>
+<div class="grid gap-12">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="shrink-0 w-14 h-14 bg-white dark:bg-slate-800 rounded-2xl shadow-sm flex items-center justify-center border border-brand-blue-soft">
+<span class="material-symbols-outlined text-primary text-3xl">volunteer_activism</span>
+</div>
+<div>
+<h2 class="font-display text-2xl font-bold text-brand-dark dark:text-white mb-4">Voluntary Participation</h2>
+<ul class="space-y-3">
+<li class="flex items-start gap-3">
+<span class="material-icons-round text-primary text-xl">check_circle</span>
+<span>You may choose whether or not to participate in any of our studies.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-round text-primary text-xl">check_circle</span>
+<span>You may skip any question you do not wish to answer.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-round text-primary text-xl">check_circle</span>
+<span>You may stop participating at any time without penalty or explanation.</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="shrink-0 w-14 h-14 bg-white dark:bg-slate-800 rounded-2xl shadow-sm flex items-center justify-center border border-brand-blue-soft">
+<span class="material-symbols-outlined text-primary text-3xl">lock</span>
+</div>
+<div>
+<h2 class="font-display text-2xl font-bold text-brand-dark dark:text-white mb-4">Data Privacy &amp; Anonymity</h2>
+<ul class="space-y-3">
+<li class="flex items-start gap-3">
+<span class="material-icons-round text-primary text-xl">security</span>
+<span>We do not sell data to third parties.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-round text-primary text-xl">security</span>
+<span>Responses are anonymized during the analysis process.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-round text-primary text-xl">security</span>
+<span>Individual answers are never publicly attributed to specific persons or companies.</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="shrink-0 w-14 h-14 bg-white dark:bg-slate-800 rounded-2xl shadow-sm flex items-center justify-center border border-brand-blue-soft">
+<span class="material-symbols-outlined text-primary text-3xl">insights</span>
+</div>
+<div>
+<h2 class="font-display text-2xl font-bold text-brand-dark dark:text-white mb-4">Use of Collected Information</h2>
+<p class="leading-relaxed">
+                        Data collected through our research is used exclusively to identify industry trends and develop insights that help improve dental CAD/STL workflows. Our findings are shared as aggregated summaries to help the community better understand technology needs.
+                    </p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="shrink-0 w-14 h-14 bg-white dark:bg-slate-800 rounded-2xl shadow-sm flex items-center justify-center border border-brand-blue-soft">
+<span class="material-symbols-outlined text-primary text-3xl">shield_with_heart</span>
+</div>
+<div>
+<h2 class="font-display text-2xl font-bold text-brand-dark dark:text-white mb-4">No Patient or Clinical Data</h2>
+<p class="leading-relaxed">
+                        We do not collect Protected Health Information (PHI) or specific clinical patient records. Our research focuses strictly on professional workflows, software utilization, and operational challenges.
+                    </p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="shrink-0 w-14 h-14 bg-white dark:bg-slate-800 rounded-2xl shadow-sm flex items-center justify-center border border-brand-blue-soft">
+<span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+</div>
+<div>
+<h2 class="font-display text-2xl font-bold text-brand-dark dark:text-white mb-4">Transparency &amp; Integrity</h2>
+<p class="leading-relaxed">
+                        We are dedicated to the honest representation of our findings. We maintain clear communication about our research goals and ensure that our reports accurately reflect the feedback we receive from the dental community.
+                    </p>
+</div>
+</div>
+</div>
+<div class="mt-20 pt-12 border-t border-brand-blue-soft text-center">
+<h3 class="font-display text-xl font-bold text-brand-dark dark:text-white mb-4">Questions or Concerns</h3>
+<p class="mb-6">If you have any questions regarding our research practices or how your information is handled, please contact us.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:underline" href="mailto:info@dentaldesignresearch.com">
+<span class="material-icons-round">email</span>
+                info@dentaldesignresearch.com
+            </a>
+</div>
+</div>
+</section>
+<footer class="bg-brand-dark text-white py-16">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+			<div class="col-span-1 md:col-span-2">
+				<div class="flex items-center gap-2 mb-6">
+					<span class="material-icons-round text-primary text-3xl">biotech</span>
+					<span class="font-display font-bold text-xl tracking-tight">Dental Design Research</span>
+				</div>
+				<p class="text-slate-400 max-w-sm">
+					Building the most comprehensive dataset on dental CAD/STL workflows to drive the next generation of industry tools.
+				</p>
+			</div>
+			<div>
+			<h4 class="font-bold mb-6 text-slate-200">Contact</h4>
+			<a class="text-slate-400 hover:text-primary transition-colors" href="mailto:info@dentaldesignresearch.com">info@dentaldesignresearch.com</a>
+			</div>
+			<div>
+			<h4 class="font-bold mb-6 text-slate-200">Legal</h4>
+			<ul class="space-y-3 text-slate-400 text-sm">
+			<li><a class="hover:text-primary" href="#">Privacy Policy</a></li>
+			<li><a class="hover:text-primary" href="#">Terms of Service</a></li>
+			<li><a class="hover:text-primary font-bold text-primary" href="research-ethics.html">Research Ethics</a></li>
+			</ul>
+			</div>
+		</div>
+		<div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+		<p class="text-slate-500 text-sm">© 2026 Dental Design Research Project. All rights reserved.</p>
+		<div class="flex gap-6">
+		<span class="text-xs text-slate-600 italic">Independent Research Initiative</span>
+		</div>
+		</div>
+	</div>
+</footer>
+
+</body></html>
